@@ -45,20 +45,22 @@ app.get('/createdb', (req,res) => {
 //final db start
 
 
-const db = mysql.createConnection({
+/*   8888888888888888
+    const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
     database: 'nodemysql'
 
-});
+});*/
 
 const dbaws = mysql.createConnection({
     host: 'database-1.ct4ad3trjeto.us-east-1.rds.amazonaws.com',
     port: '3306',
     user: 'admin',
     password: '41gO7hMvA95',
-    database: 'surgedb'
+    database: 'utshreach'
+
 
 });
 
@@ -67,10 +69,10 @@ dbaws.connect((err) => {
     console.log('AWS connected');
 })
 
-db.connect((err) => {
+/*db.connect((err) => {
     if (err) throw err;
     console.log("Connected!");
-});
+});8888888888888888 */
 /*
 app.get('/createdb', (req,res) => {
     let sql = 'CREATE DATABASE nodemysql';
@@ -132,7 +134,7 @@ app.post('/sendform', (req,res) => {
 
     let post = {name: req.body.name, phone: req.body.phone, email: req.body.email};
     let sql = 'INSERT INTO posts SET ?';
-    let query = db.query(sql, post, (err,result) =>{
+    let query = dbaws.query(sql, post, (err,result) =>{
         if(err) throw err;
         console.log(result);
 
