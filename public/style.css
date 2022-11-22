@@ -1,0 +1,2286 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+
+
+
+*{
+    font-family: 'Cormorant Garamond', serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+
+
+a{
+    font-family: 'Cormorant', serif;
+
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 5rem;
+
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+
+
+}
+.navItemsLeft{
+    display: flex;
+}
+
+.navItemsRight{
+
+    align-items: center;
+}
+
+.navItemsRight ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navItemsRight ul a{
+    margin-right: 1.5rem;
+}
+
+.navItemsLeft h1{
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 2rem;
+
+}
+
+.navItemsLeft .logo{
+    width: 100px;
+    height: 4rem;
+    background-image: url("./img/LOGOUTSAH.png");
+    background-color: #560606;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.video{
+    width: 100%;
+    height: 90vh;
+    background-color: #4e9494;
+    position: relative;
+    background: url("./img/pexels-viresh-studio-1444442.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.video h1{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 4rem;
+    font-style: italic;
+
+}
+
+.gallery{
+    width: 80%;
+    /*scroll-snap-align: start;*/
+
+}
+
+
+/*animation classes*/
+.bottom-up{
+    animation: bottom-up 1s;
+}
+
+.top-down{
+    animation: top-down 1s;
+}
+
+.left-to-right{
+    animation: left-to-right 2s;
+}
+
+.right-to-left{
+    animation: right-to-left 2s;
+
+}
+
+.imgContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+}
+
+
+.bg1{
+    background: url("./img/gall/pexels-nghia-trinh-931796.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.bg2{
+    background: url("./img/gall/pexels-kumar-saurabh-1456613.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.imgContainer .imgItem{
+    background-color: black;
+    height: 13rem;
+    border-radius: 10px;
+
+
+}
+
+.imgContainer .imgItem:hover{
+    opacity: 0.8;
+    transform: scale(0.98);
+}
+
+.imgContainer > .imgItem:nth-of-type(1){
+    grid-column: 1 / 4;
+}
+
+.imgContainer > .imgItem:nth-of-type(5){
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+    height: auto;
+
+}
+.imgContainer > .imgItem:nth-of-type(6){
+    grid-column: 1 / 3;
+
+
+}
+
+
+
+
+
+
+
+.gallery h1{
+    font-family: 'Great Vibes', cursive;
+    font-weight: lighter;
+    font-size: 4rem;
+    color: #D0B159;
+    margin: auto;
+    text-align: center;
+    padding: 4rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+
+}
+
+.btnMore{
+    display: block;
+    background-color: #8C8D87;
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    width: 5rem;
+    line-height: 50px;
+    margin: 30px auto 0;
+    border-radius: 50px;
+    animation: shake .5s infinite, btnAnimate 2s infinite ;
+
+}
+
+.windy{
+    animation: btnAnimate 3s infinite ;
+
+}
+
+
+
+.ribbon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 3.5rem;
+    background: linear-gradient(rgb(72,0,72,0.7), rgb(192,72,72,0.7)), url("./img/Indian-Wedding.jpg") center;
+    background-position: 40% 47%;
+    width: 100%;
+    height: 10rem;
+    position: relative;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+
+}
+
+/*.ribbon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;*/
+    /*background-image: linear-gradient(120deg, #eaee44, #33d0ff);*/
+    /*opacity: .7;
+}*/
+
+
+.ribbon h2{
+    font-family: 'Grechen Fuemen', cursive;
+    color: #D8DB36;
+    font-size: 4rem;
+    z-index: 1;
+}
+
+.ribbon p{
+    color: white;
+    font-size: 1rem;
+}
+
+.services{
+
+
+
+}
+
+.serv1{
+
+    background: url("./img/serv1.jpg") center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: start;
+    justify-self: center;
+    height: 20rem;
+    width: 25rem;
+    position: relative;
+    opacity: 0;
+
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+
+}
+
+.cardTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant', serif;
+    position: absolute;
+    width: 24rem;
+    height: 12rem;
+    background-color: #F9F9F9;
+    z-index: 3;
+}
+
+.serv1 .cardTop{
+    top: 10rem;
+    left: 10rem;
+    opacity: 0;
+
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;}
+
+
+.serv2 .cardTop{
+    top: 22rem;
+    right: 10rem;
+    height: 15rem;
+    width: 27rem;
+    opacity: 0;
+
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;}
+
+.serv3 .cardTop{
+    top: 13rem;
+    left: 20rem;
+    opacity: 0;
+
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;    width: 30rem;
+}
+
+.serv4 .cardTop{
+    top: 20rem;
+    right: 20rem;
+    opacity: 0;
+
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;}
+
+
+
+
+.cardTop h2{
+    position: relative;
+    display: inline-block;
+
+    margin-bottom: 1.2rem;
+}
+
+.serv1 .cardTop h2, .serv1 .cardTop p{
+    text-align: left;
+}
+
+.serv2 .cardTop h2, .serv2 .cardTop p{
+
+    text-align: right;
+
+}
+.serv3 .cardTop h2, .serv1 .cardTop p{
+    text-align: left;
+}
+
+
+
+.cardTop h2 span{
+
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    top: 2.5rem;
+    left: 0;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+
+.left-to-rightLine{
+    animation: left-to-rightLine 1s;
+
+}
+
+.cardTop .cardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.serv1 .cardTop .cardContent{
+    align-items: flex-start;
+    text-align: left;
+
+}
+
+.serv2 .cardTop .cardContent{
+    align-items: flex-end;
+    text-align: right;
+
+}
+
+.serv3 .cardTop .cardContent{
+    align-items: flex-start;
+    text-align: left;
+
+}
+
+.serv4 .cardTop .cardContent{
+    align-items: flex-end;
+    text-align: right;
+
+}
+
+
+
+
+
+/*.serv1::after{
+    content: '';
+
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+    width: 24rem;
+    height: 14rem;
+    background-color: #F9F9F9;
+}
+*/
+
+/*serv 2*/
+
+
+.serv2{
+    background: url("./img/serv2.jpg") center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: center;
+    justify-self: center;
+    margin-top: 3rem;
+    height: 40rem;
+    width: 25rem;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+}
+.serv3{
+    background: url("./img/serv3.jpg") center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: start;
+    justify-self: center;
+    height: 26rem;
+    width: 34rem;
+    position: relative;
+    opacity: 0;
+
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+    z-index: 3;
+}
+
+
+
+
+.serv4{
+    background: url("./img/serv4.jpg") center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: start;
+    justify-self: center;
+    margin-top: 20rem;
+    height: 30rem;
+    width: 34rem;
+    position: relative;
+    opacity: 0;
+
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+    z-index: 2;
+
+}
+
+.servContent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+
+}
+
+.services h1{
+    font-size: 3rem;
+    font-weight: lighter;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    color: #D0B159;
+    margin: 3rem auto;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+    opacity: 0;
+
+}
+
+h1.gold{
+    font-size: 3rem;
+    font-weight: lighter;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    color: #D0B159;
+    margin: 3rem auto;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+    opacity: 0;
+
+}
+
+
+
+
+
+.floralImg{
+    background-color: #560606;
+    background: url("./img/bc311a9d7a8ff251af1e27a35f045f65.png");
+    opacity: .9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 18rem;
+    width: 18rem;
+    position: absolute;
+    top: -20rem;
+    left: 4rem;
+    transform: rotate(-16deg);
+    animation: floatel 8s ease-in-out infinite;
+    z-index: 1;
+}
+
+.vineImg1{
+    background-color: #560606;
+    background: url("./img/fdcrezg4oi.png");
+    opacity: .9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 18rem;
+    width: 18rem;
+    position: absolute;
+    top: 11rem;
+    left: -28.5rem;
+    transform: rotate(-16deg);
+    animation: floatnRotateElv1 8s ease-in-out infinite;
+    z-index: 1;
+
+}
+
+/*.vineImg2{
+    background-color: #560606;
+    background: url("./img/dcrezg4oi.png");
+    opacity: .9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 18rem;
+    width: 18rem;
+    position: absolute;
+    top: -9.5rem;
+    left: 2rem;
+    transform: rotate(-16deg);
+    animation: floatnRotateElv2 8s ease-in-out infinite;
+    z-index: 1;
+
+}   DEFAULT*/
+
+.vineBackClipper{
+    position: relative;
+}
+
+
+.vineImg2{
+    background-color: #560606;
+    background: url("./img/dcrezg4oi.png");
+    opacity: .9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 18rem;
+    width: 18rem;
+    position: absolute;
+    top: -8.5rem;
+    left: 8rem;
+    transform: rotate(-16deg);
+    animation: floatnRotateElv2 8s ease-in-out infinite;
+    z-index: 1;
+
+}
+
+.moreServ{
+    position: relative;
+    margin-top: 2rem;
+
+}
+
+.moreServ2{
+    position: relative;
+    margin-top: 3rem;
+    margin-left: -3rem;
+    background: #D8DB36;
+    z-index: 3;
+    display: inline-block;
+    animation: horizontal-shaking 8s ease-in-out infinite;
+
+
+}
+
+.moreServ2 h1{
+    font-size: 1.1rem;
+    padding: .5rem 2rem .5rem 7rem;
+    font-family: 'Cormorant', serif;
+
+    display: inline-block;
+    font-weight: lighter;
+
+}
+
+.vinefloral20{
+
+    background-color: #560606;
+    background: url("./img/widthvineFcrp2.png");
+    opacity: .9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 28rem;
+    width: 28rem;
+    position: absolute;
+    top: -22rem;
+    left: 6rem;
+    transform: rotate(-16deg);
+    animation: horizontalf-shaking 8s ease-in-out infinite;
+    z-index: 1;
+}
+
+.vinefloral21{
+
+    background-color: #560606;
+    background: url("./img/imgo.png");
+    opacity: .7;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 24rem;
+    width: 24rem;
+    position: absolute;
+    top: -16.5rem;
+    left: 4rem;
+    transform: rotate(-30deg);
+    animation: horizontalf-shaking2 8s ease-in-out infinite;
+    z-index: 1;
+}
+
+
+/*petals*/
+
+.petal{
+    position: absolute;
+    left: 12rem;
+    z-index: 0;
+}
+
+.petal{
+
+
+
+    height: 1rem;
+    width: 1rem;
+    animation: petals 9.5s linear infinite;
+}
+
+.petal1{
+    background: url("./img/petals/Utsah1/Vector1.png");
+
+    animation-duration: 9s;
+    top: 2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.petal2{
+    background: url("./img/petals/Utsah1/Vector2.png");
+
+    animation-duration: 7s;
+    width: 1.5rem;
+    animation-delay: 1s;
+    top: -3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.petal3{
+    background: url("./img/petals/Utsah1/Vector3.png");
+
+    animation-duration: 6s;
+    width: 2rem
+    top: -6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.petal4{
+    background: url("./img/petals/Utsah1/Vector4.png");
+
+    animation-duration: 10s;
+    width: 2rem
+    animation-delay: 1s;
+    top: -8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.petal5{
+    background: url("./img/petals/Utsah1/Vector5.png");
+
+    animation-duration: 8s;
+    width: 2rem
+    top: -7rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.petal6{
+    background: url("./img/petals/Utsah1/Vector6.png");
+
+    width: 2rem
+    top: -5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.petal7{
+    background: url("./img/petals/Utsah1/Vector7.png");
+
+    animation-duration: 9s;
+
+    width: 2rem
+    animation-delay: 2s;
+    top: -10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.petal8{
+    background: url("./img/petals/Utsah1/Vector8.png");
+
+    animation-duration: 14s;
+
+    width: 2rem
+    animation-delay: .8s;
+    top: -9rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.partners{
+    background-color: #FFEFEF;
+    margin-top: 2rem;
+}
+
+.partners h1{
+    font-size: 3rem;
+    font-weight: lighter;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    color: #C0BDB4;
+    padding: 3rem;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+
+}
+
+
+
+
+
+.petal9{
+    animation-duration: 11s;
+
+    width: 1.7rem;
+    animation-delay: .8s;
+    top: -12rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: url("./img/petals/Utsah1/Vector9.png");
+}
+/*petals*/
+
+.partners{
+    position: relative;
+}
+
+.flexPart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+
+
+
+.partners .partImg{
+
+    margin: 0 3rem;
+    height: 26rem;
+    width: 18rem;
+    position: relative;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+    border-radius: 20px;
+
+
+}
+
+.partners .part1{
+    background: url("./img/part0.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+.partners .part2{
+    background: url("./img/part1.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 9;
+}
+
+.partners .part3{
+    background: url("./img/part3.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.partTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20rem;
+
+    left: 4rem;
+    opacity: 0;
+    background-color: #F9F9F9;
+    z-index: 3;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+}
+
+.partContent{
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    width: 15rem;
+}
+
+.partContent h2{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: lighter;
+    padding: 1rem 1rem 1rem 1rem;
+
+}
+
+.vineLong{
+    position: absolute;
+    background-color: #560606;
+    background: url("./img/vineLong/VectorVine.png") center no-repeat;
+    width: 100%;
+    height: 40rem;
+    background-size: contain;
+    filter: blur(.3rem);
+    top: 4rem;
+}
+
+/*testimonials*/
+
+.testimonials{
+    position: relative;
+}
+
+.slideCover{
+    height: 200%;
+    width: 120%;
+    padding-left: 5rem;
+    overflow: hidden;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+    opacity: 0;
+}
+
+.personImg{
+    background: url("./img/testimonials/person1.png") no-repeat;
+    background-size: contain;
+    height: 22rem;
+    width: 30rem;
+    position: absolute;
+    z-index: 4;
+    top: 8.9rem;
+    left: -2rem;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+}
+
+.slide-row{
+    display: flex;
+    width: 3200px;
+    transition: 0.5s;
+}
+
+.slide-col{
+    width: 800px;
+    height: 400px;
+    position: relative;
+}
+
+.personText{
+    font-family: 'Cormorant', serif;
+    font-size: 1.4rem;
+    color: #A3A3A3;
+    background: #F9F9F9;
+
+    width: 49rem;
+    position: absolute;
+    left: -29rem;
+    top: 50%;
+    transform: translateX(50%);
+    padding: 5rem;
+    text-align: center;
+    padding-left: 24rem;
+
+
+}
+.persName{
+    margin-top: 2rem;
+    font-weight: lighter;
+    font-style: italic;
+
+}
+.testimentsContainer{
+    width: 42rem;
+    height: 18rem;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+    opacity: 0;
+    /*transform: translate(-50%, -50%);*/
+
+
+}
+
+.indicator{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -22rem;
+}
+
+.testbtn{
+    display: inline-block;
+    height: .8rem;
+    width: .8rem;
+    margin: .2rem;
+    border-radius: .2rem;
+    background: #D9D9D9;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.active{
+    width: 2rem;
+}
+
+.testDesign1{
+    position: absolute;
+    background-color: #560606;
+    background: url("./img/testArtI2.png") center no-repeat;
+    width: 100%;
+    height: 40rem;
+
+    background-size: contain;
+    left: -25rem;
+    top: 4rem;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    filter: blur(.5rem);
+
+}
+
+.testDesign2{
+    position: absolute;
+    background-color: #560606;
+    background: url("./img/testArtI3.png") center no-repeat;
+    width: 100%;
+    height: 40rem;
+    filter: blur(.5rem);
+
+    background-size: contain;
+    left: 25rem;
+    top: 4rem;
+    animation-duration: 5s;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("./img/parallel.png");
+
+    /* Set a specific height */
+
+    height: 100vh;
+    width: 100%;
+    margin-top: 105vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+
+}
+
+.parallax::after{
+    content: '';
+    position: absolute;
+    background: #5C4040;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 47%;
+    z-index: 0;
+
+}
+.paraContent{
+    width: 50%;
+    z-index: 10;
+    color: white;
+    margin-right: 5rem;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    will-change: transform, opacity;
+}
+
+.paraContent h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: lighter;
+
+    font-size: 4rem;
+
+
+}
+
+
+
+
+.paraContent .paraHead{
+    color: #F9DA8A;
+}
+.paraContent p{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: lighter;
+    font-size: 1.9rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.paraContain{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+
+    height: 100%;
+
+}
+
+
+.parabtn{
+    display: inline-block;
+    color: #F9DA8A;
+    background: #5C4040;
+    padding: 1rem 4rem;
+    cursor: pointer;
+
+}
+
+.para2btn{
+    font-size: 1rem;
+    display: block;
+    color: #7d7f79;
+    border: 1px solid #7d7f79;;
+    background: none;
+    padding: .7rem 3rem;
+    cursor: pointer;
+
+}
+
+
+/*footer*/
+
+footer{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: lighter;
+    padding: 3rem 0;
+    background-color: #8C8D87;
+    color: white;
+
+}
+
+.footHead{
+
+    font-size: 1.5rem;
+
+}
+
+.divider{
+    background: white;
+    width: 100%;
+    height: 1px;
+    margin: 1rem 0;
+}
+
+.linkContent{
+    display: flex;
+}
+
+.fSeg1{
+    width: 36rem;
+}
+
+.fSeg2{
+    width: 25rem;
+}
+.fSeg3{
+    width: 30rem;
+    text-align: center;
+}
+.fSeg4{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+
+.fSeg4 .formContainer{
+    background-color: white;
+    padding: 2rem;
+    width: 12rem;
+}
+.fSeg4 h1{
+    color: black;
+}
+
+
+.linkContent h1{
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.linkContent p{
+    font-family: 'Gilda Display', serif;
+
+    font-weight: lighter;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-bottom: .8rem;
+}
+
+footer .fSeg3 h1{
+    font-family: 'Gwendolyn', cursive;
+
+}
+.fmap{
+
+}
+#frame{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.socialIcons{
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+}
+.social-icon{
+    background: #560606;
+
+
+    height: 3rem;
+    width: 3rem;
+}
+
+.social-icon.icon1{
+    background: url("./img/socialIcons.png");
+    background-size: 16.1rem;
+    background-position: 0 50%;
+}
+
+
+.social-icon.icon2{
+    background: url("./img/socialIcons.png");
+    background-size: 16.1rem;
+    background-position: 25% 50%;
+}
+
+.social-icon.icon3{
+    background: url("./img/socialIcons.png");
+    background-size: 16.1rem;
+    background-position: 50% 50%;
+}
+
+
+.social-icon.icon4{
+    background: url("./img/socialIcons.png");
+    background-size: 16.1rem;
+    background-position: 75% 50%;
+}
+
+.social-icon.icon5{
+    background: url("./img/socialIcons.png");
+    background-size: 16.1rem;
+    background-position: 100% 50%;
+}
+
+.fLine{
+    height: 18rem;
+    width: 1px;
+    background-color: white;
+    margin: 1rem 2rem 0 2rem;
+}
+
+.flexNavTo{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.flexNavTo a{
+    color: white;
+    margin: .6rem 0;
+
+
+    font-weight: lighter;
+    font-size: 1.1rem;
+    font-weight: lighter;
+
+}
+
+.introUtsah{
+    font-family: 'Cormorant', serif;
+
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.leavesCurve{
+    background: url("./img/leavescurve.png") center no-repeat;
+    background-size: contain;
+    width: 5rem;
+    height: 2rem;
+    margin: auto;
+    margin-top: 1rem;
+
+}
+
+
+.modalReach{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.modalBox{
+    margin: 8% auto;
+    width: 50rem;
+    height: 70%;
+    background: white;
+    position: relative;
+    display: flex;
+    animation: modalopen 1s;
+
+}
+
+.modalBody{
+    width: 60%;
+    padding: 3.5rem;
+
+
+}
+
+.modalBody h1{
+    font-weight: lighter;
+    font-size: 3rem;
+
+}
+
+.ReachSubmit{
+    background: brown;
+    border: 0;
+    width: 100%;
+    margin-top: .3rem;
+    padding: .7rem;
+    font-size: 1.3rem;
+    color: white;
+
+}
+
+.modalReach input{
+    width: 100%;
+    margin: 1rem 0;
+    border: 2px #ccc solid;
+    height: 3rem;
+    padding: .5rem;
+    display: block;
+}
+
+.clsBtn{
+    cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.formImg{
+    background: url("./img/formImg.jpg");
+    background-size: cover;
+    background-position: 80% 50%;
+    width: 20rem;
+    height: 100%;
+
+}
+
+.fSeg4 form input{
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    color: white;
+}
+
+.submitSeg4{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: white;
+    background-color: #8C8D87;
+    padding: .2rem 2rem;
+    border: 0;
+
+}
+
+.paraFlower{
+    background: url("./img/flowerpara.png") center no-repeat;
+    width: 8rem;
+    height: 4rem;
+    margin: 0 auto;
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: none;
+    border: none;
+    z-index: 10;
+    transition: all 0.25s;
+    display: none;
+    margin: 1.5rem 1rem 1rem 1rem;
+
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: black;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-top{
+}
+
+.hamburger-middle{
+    transform: translateY(7px);
+
+}
+.hamburger-bottom{
+    transform: translateY(14px);
+}
+
+.open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-middle{
+    display: none;
+}
+.open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.mobile-menu{
+    position: fixed;
+    top: 4rem;
+    right: 0;
+    background-color: white;
+    z-index: 10;
+    width: 90%;
+    height: 100%;
+    padding: 1rem;
+    padding-left: 2rem;
+    box-shadow: inset 0 4px 3px -3px rgba(0 0 0 / 10%),
+    inset 0 4px 2px -2px rgb(0 0 0 / 7%);
+    transition: all 0.3s;
+}
+
+.hidden{
+    transform: translateX(100%);
+}
+
+.noscroll{
+    overflow: hidden;
+}
+
+.mobile-menu ul{
+    line-height: 3;
+    border-bottom: #bdbdbd solid 1px;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    list-style: none;
+
+}
+
+.mobile-menu a{
+    font-size: 1.2rem;
+
+}
+
+.mobile-menu a:hover{
+    color: chartreuse;
+
+}
+
+.mobile-menu div{
+
+}
+
+
+@media (max-width: 768px) {
+    .hamburger{
+        display: block;
+
+    }
+
+    nav .navItemsRight{
+        display: none;
+    }
+
+    .navItemsLeft{
+        border: none;
+    }
+
+    .navItemsLeft .logo{
+        border: none;
+        width: 4rem;
+        height: 3rem;
+
+
+    }
+
+
+    nav{
+        display: flex;
+        width: 100%;
+        height: 4rem;
+
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1%;
+        padding-right: 1%;
+
+
+    }
+
+    .imgContainer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8px;
+
+    }
+
+    .imgContainer .imgItem {
+        background-color: black;
+        height: 6rem;
+
+    }
+
+    .imgContainer > .imgItem:nth-of-type(5){
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        height: auto;
+
+    }
+    .imgContainer > .imgItem:nth-of-type(6){
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+        height: auto;
+
+    }
+
+
+    .ribbon{
+
+
+        height: 6rem;
+        background-position: 48% 46%;
+
+    }
+
+    .ribbon h2{
+
+
+        font-size: 2rem;
+
+    }
+
+    .ribbon p{
+
+        font-size: .6rem;
+    }
+
+
+
+    .servContent{
+        grid-template-columns: repeat(1, 1fr);
+
+
+
+    }
+    .serv1{
+
+
+
+
+        align-self: center;
+        justify-self: center;
+        height: 15rem;
+        width: 18rem;
+        z-index: 10;
+
+    }
+
+    .cardTop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Cormorant', serif;
+        position: absolute;
+        width: 20rem;
+        height: 10rem;
+        background-color: #F9F9F9;
+        z-index: 3;
+    }
+    .serv1 .cardTop{
+        top: 10rem;
+        left: 1rem;
+        opacity: 0;
+
+
+    }
+
+    .cardTop h2{
+        font-size: 1.1rem;
+
+    }
+
+    .cardTop h2 span{
+        top: 2rem;
+
+    }
+
+    .serv2{
+
+        align-self: center;
+        justify-self: center;
+        height: 35rem;
+        width: 18rem;
+
+    }
+
+    .serv2 .cardTop{
+        top: 20rem;
+        right: 1rem;
+        height: 10rem;
+        width: 22rem;
+        opacity: 0;
+
+        animation-fill-mode: forwards;
+        will-change: transform, opacity;}
+
+
+    .vineImg1{
+
+        height: 12rem;
+        width: 12rem;
+
+        top: 25rem;
+        left: 10rem;
+
+
+    }
+
+    .vineImg2{
+
+        height: 12rem;
+        width: 12rem;
+        position: absolute;
+        top: -2rem;
+        left: 4rem;
+
+    }
+
+    .serv3{
+
+        align-self: center;
+        justify-self: center;
+        height: 20rem;
+        width: 18rem;
+        position: relative;
+        opacity: 0;
+
+    }
+
+
+    .serv3 .cardTop{
+        top: 12.5rem;
+        left: 2rem;
+        opacity: 0;
+        height: 10rem;
+        width: 22rem;
+
+        animation-fill-mode: forwards;
+        will-change: transform, opacity;
+    }
+
+
+
+    .floralImg{
+        display: none;
+    }
+
+
+    .serv4{
+
+        align-self: center;
+        justify-self: center;
+        margin-top: 3rem;
+        height: 30rem;
+        width: 18rem;
+        position: relative;
+        opacity: 0;
+
+        animation-fill-mode: forwards;
+        will-change: transform, opacity;
+        z-index: 2;
+
+    }
+
+    .serv4 .cardTop{
+        top: 20rem;
+        right: 20rem;
+        opacity: 0;
+
+        animation-fill-mode: forwards;
+        will-change: transform, opacity;}
+
+    .serv4 .cardTop{
+        top: 17rem;
+        right: 1rem;
+        height: 10rem;
+        width: 20rem;
+
+
+        }
+
+
+    .petal{
+
+
+
+
+        animation: petalsUp 80s linear infinite;
+    }
+
+
+    .petal1{
+        background: url("./img/petals/Utsah1/Vector1.png");
+
+        animation-duration: 9s;
+        top: 2rem;
+        left: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .petal2{
+        background: url("./img/petals/Utsah1/Vector2.png");
+
+        animation-duration: 7s;
+
+        animation-delay: 1s;
+        top: -3rem;
+        left: 2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .petal3{
+        background: url("./img/petals/Utsah1/Vector3.png");
+
+        animation-duration: 6s;
+
+        top: -6rem;
+        left: 4rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .petal4{
+        background: url("./img/petals/Utsah1/Vector4.png");
+
+        animation-duration: 10s;
+
+        animation-delay: 1s;
+        top: -8rem;
+        left: 7rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .petal5{
+        background: url("./img/petals/Utsah1/Vector5.png");
+
+        animation-duration: 8s;
+        width: 2rem;
+        top: -7rem;
+        left: 10rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .petal6{
+        background: url("./img/petals/Utsah1/Vector6.png");
+
+        width: 2rem;
+        left: 13rem;
+        top: -5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .petal7{
+        background: url("./img/petals/Utsah1/Vector7.png");
+
+        animation-duration: 9s;
+
+        width: 2rem;
+        left: 20rem;
+        animation-delay: 2s;
+        top: -10rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .petal8{
+        background: url("./img/petals/Utsah1/Vector8.png");
+
+        animation-duration: 14s;
+
+        width: 2rem;
+        left: 21rem;
+        animation-delay: .8s;
+        top: -9rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .petal9{
+        animation-duration: 11s;
+
+        width: 1.7rem;
+        animation-delay: .8s;
+        left: 19rem;
+        top: -12rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background: url("./img/petals/Utsah1/Vector9.png");
+    }
+
+    .slideCover{
+        height: 200%;
+        width: 120%;
+        padding-left: 5rem;
+        overflow: visible;
+
+    }
+
+    /*.slide-row{
+        display: flex;
+        width: 3200px;
+        transition: 0.5s;
+    }
+
+    .slide-col{
+        width: 800px;
+        height: 400px;
+        position: relative;
+    }
+*/
+
+    .testimentsContainer{
+        width: 42rem;
+        height: 18rem;
+
+        top: -140%;
+        left: 6%;
+
+        /*transform: translate(-50%, -50%);*/
+
+
+    }
+
+
+    .personText{
+
+        font-size: 1rem;
+
+
+        width: 15rem;
+
+        left: -9rem;
+
+
+        padding: 2rem;
+        text-align: center;
+        border-radius: 20px;
+
+
+    }
+    .persName{
+        margin-top: 1rem;
+
+    }
+
+    .personImg{
+        height: 4rem;
+        width: 4rem;
+        background-size: cover;
+        border-radius: 50%;
+        top: 11rem;
+        left: -3rem;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        will-change: transform, opacity;
+    }
+
+    .flexPart{
+
+        flex-direction: column;
+
+        padding-bottom: 5rem;
+        gap: 1rem;
+    }
+
+    .indicator{
+
+        left: 26%;
+
+        bottom: -13rem;
+        z-index: 20;
+    }
+
+    .testbtn{
+        width: .4rem;
+        height: .4rem;
+        margin: .1rem;
+    }
+    .active{
+        width: 1rem;
+    }
+
+    .testDesign2{
+
+        width: 100%;
+        height: 40rem;
+        left: 16rem;
+        top: -6rem;
+
+    }
+
+    .testDesign1{
+
+        width: 100%;
+        height: 40rem;
+        left: -10rem;
+        top: 0rem;
+
+    }
+    .parallax {
+        /* The image used */
+
+
+        /* Set a specific height */
+        background-size: cover;
+        height: 35vh;
+        width: 100%;
+        margin-top: 70vh;
+        /* Create the parallax scrolling effect */
+
+
+
+    }
+    .paraContent{
+        width: 50%;
+        z-index: 10;
+        color: white;
+        margin: auto;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        will-change: transform, opacity;
+    }
+
+
+    .paraContent p{
+
+        font-size: .8rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .paraContent h1{
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: lighter;
+
+        font-size: 1rem;
+
+
+    }
+    .parabtn{
+        font-size: .7rem;
+        padding: .5rem 2rem;
+
+
+    }
+
+    .paraFlower{
+        background-size: contain;
+        width: 5rem;
+        height: 2rem;
+        margin: 0 auto;
+    }
+
+    .linkContent{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    footer .fLine{
+
+        height: 1px;
+        width: 100%;
+        background-color: white;
+        margin: 2rem;
+    }
+
+    .flexNavTo{
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+
+    .footHead{
+
+        font-size: 1rem;
+
+    }
+    .linkContent h1{
+        font-size: 1.5rem;
+
+    }
+
+    .linkContent p{
+
+        font-size: .9rem;
+        font-weight: lighter;
+        margin-bottom: .8rem;
+    }
+
+    .fSeg2 h1{
+        text-align: center;
+    }
+    .fSeg4{
+        margin: auto;
+    }
+
+
+    .modalBox{
+        margin: 9vh auto;
+        width: 20rem;
+        height: 80%;
+        background: white;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .modalBody{
+        padding: 1rem 0;
+        margin: auto;
+
+    }
+    .modalBody h1{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .ReachSubmit{
+        background: brown;
+        border: 0;
+        width: 100%;
+        margin-top: .3rem;
+
+        padding: .7rem;
+        font-size: 1rem;
+        color: white;
+
+    }
+
+    .modalReach form{
+        margin-bottom: 1.8rem;
+    }
+
+
+
+
+}
+
+
+@keyframes left-to-right {
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes right-to-left {
+    0%{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+
+@keyframes bottom-up {
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes top-down {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes btnAnimate {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes left-to-rightLine {
+    0%{
+        opacity: 0;
+        width: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes right-to-leftLine {
+    0%{
+
+        opacity: 0;
+        width: 0;
+    }
+    100%{
+
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes floatel{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes floatnRotateElv1{
+    0%, 100%{
+        transform: translateY(0px) rotate(-65deg);
+
+        transform-origin: 100% 50%;
+    }
+    50%{
+        transform: translateY(-10px) rotate(-62deg);
+    }
+}
+
+@keyframes floatnRotateElv2{
+    0%, 100% {
+        transform: translateX(0px) rotate(-40deg);
+        transform-origin: 50% 100%;
+    }
+    50% {
+        transform: translateX(40px) rotate(-35deg);
+        transform-origin: 50% 100%;
+    }
+}
+
+@keyframes horizontalf-shaking {
+    0% { transform: translateX(0) rotate(-90deg)}
+    25% { transform: translateX(5px) rotate(-90deg)}
+    50% { transform: translateX(-5px) rotate(-90deg)}
+    75% { transform: translateX(5px) rotate(-90deg)}
+    100% { transform: translateX(0) rotate(-90deg)}
+}
+
+@keyframes horizontalf-shaking2 {
+    0% { transform: translateX(0) rotate(-78deg)}
+    25% { transform: translateX(5px) rotate(-78deg)}
+    50% { transform: translateX(-5px) rotate(-78deg)}
+    75% { transform: translateX(5px) rotate(-78deg)}
+    100% { transform: translateX(0) rotate(-78deg)}
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
+
+
+@keyframes petals {
+    from { transform: translateY(100%) translateX() rotate(-50deg);
+        opacity: 0;}
+    10%{
+        opacity: 1;
+    }
+
+    to   { transform: translateY(calc(-100vh + -100%)) translateX(50rem) rotate(20deg); opacity: 0;
+    }
+}
+
+@keyframes petalsUp {
+    from {
+        transform: translateY(100%) rotate(-50deg);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+
+    to   {
+        transform: translateY(calc(-260vh + -100%)) rotate(20deg); opacity: 0;
+    }
+}
+
+
+@keyframes modalopen {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<%- include('./partials/head.ejs') %>
+<head>
+    <style>
+        .portFlContainer{
+            /*display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;*/
+            margin: 4rem 2rem 4rem 2rem;
+
+        }
+
+        .portFlContainer .box{
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: center;
+        }
+
+        .portFlContainer .box .colForBox{
+            display: flex;
+            flex-direction: column;
+            width: 32.5%;
+
+        }
+
+        .portFlContainer .box .colForBox div{
+            width: 100%;
+
+            overflow: hidden;
+        }
+
+        .portFlContainer .box .colForBox img{
+            width: 100%;
+            transition: .3s;
+            transform: scale(1.1);
+        }
+
+
+        .portFlContainer .box .colForBox img:hover {
+             transform: scale(1.2);
+         }
+    </style>
+</head>
+<body>
+<%- include('./partials/nav.ejs') %>
+
+
+    <div class="portFlContainer">
+        <% let count = 0 %>
+        <div class="box">
+
+            <div class="colForBox">
+
+                <div>
+                    <img src="./img/part1.jpg">
+                </div>
+
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+
+            </div>
+
+
+            <div class="colForBox">
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+
+            </div>
+
+
+
+            <div class="colForBox">
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+                <div>
+                    <img src="./img/pexels-viresh-studio-1444442.jpg">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+<%- include('./partials/footer.ejs') %>
+</body>
+</html>
