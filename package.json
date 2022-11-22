@@ -1,7 +1,7 @@
 {
   "name": "utsah-web",
   "version": "1.0.0",
-  "engines": { "node" : "18.12.1" },
+
   "description": "eventplanner",
   "main": "app.js",
   "scripts": {
