@@ -52,7 +52,7 @@ app.get('/createdb', (req,res) => {
     password: '',
     database: 'nodemysql'
 
-});
+});*/
 
 const dbaws = mysql.createConnection({
     host: 'databasesurge.ct4ad3trjeto.us-east-1.rds.amazonaws.com',
@@ -67,7 +67,7 @@ const dbaws = mysql.createConnection({
 dbaws.connect((err) => {
     if (err) throw err
     console.log('AWS connected');
-});*/
+})
 
 /*db.connect((err) => {
     if (err) throw err;
@@ -132,11 +132,11 @@ app.get('/portfolio', (req,res) => {
 app.post('/sendform', (req,res) => {
     console.log('send form requestedddd..');
 
-    /*let post = {name: req.body.name, phone: req.body.phone, email: req.body.email};
+    let post = {name: req.body.name, phone: req.body.phone, email: req.body.email};
     let sql = 'INSERT INTO posts SET ?';
     let query = dbaws.query(sql, post, (err,result) =>{
         if(err) throw err;
-        console.log(result);*/
+        console.log(result);
 
         res.redirect('/');
 
