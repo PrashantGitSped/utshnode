@@ -55,7 +55,7 @@ app.get('/createdb', (req,res) => {
 });*/
 
 const dbaws = mysql.createConnection({
-    host: 'database-1.ct4ad3trjeto.us-east-1.rds.amazonaws.com',
+    host: 'databasesurge.ct4ad3trjeto.us-east-1.rds.amazonaws.com',
     port: '3306',
     user: 'admin',
     password: '41gO7hMvA95',
